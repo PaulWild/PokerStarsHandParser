@@ -68,9 +68,9 @@ open System
         Date: DateTime
         Type: Variant
         HandNumber: Int64
-        Players: List<Seat>
-        PreAction: List<Actions>
-        Streets: List<Street>
+        Players: Seat List
+        PreAction: Actions List
+        Streets: Street List
     }
 
     type UnParsedLine = {
