@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PokerStarsParser\PokeStarsParser.fsproj" />
+    <ProjectReference Include="..\PokerStarsParser\PokerStarsParser.fsproj" />
   </ItemGroup>
 
 </Project>

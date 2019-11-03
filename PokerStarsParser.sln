@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PokerStarsParser.Tests", "PokerStarsParser.Tests\PokerStarsParser.Tests.fsproj", "{AE2366A9-9357-4BEB-AB06-E3F08E85D69B}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PokeStarsParser", "PokerStarsParser\PokeStarsParser.fsproj", "{A750FFE4-2BEA-4C72-9C72-6CC4A1788C5A}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PokerStarsParser", "PokerStarsParser\PokerStarsParser.fsproj", "{A750FFE4-2BEA-4C72-9C72-6CC4A1788C5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
