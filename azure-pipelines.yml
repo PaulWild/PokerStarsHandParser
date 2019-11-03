@@ -36,7 +36,7 @@ steps:
   displayName: "dotnet pack"
   inputs:
     command: 'pack'
-    packagesToPack: 'PokerStarsParse/PokerStarsParser.fsproj'
+    packagesToPack: 'PokerStarsParser/PokerStarsParser.fsproj'
     arguments: '--configuration $(buildConfiguration)'
     nobuild: true
     versioningScheme: 'byPrereleaseNumber'
