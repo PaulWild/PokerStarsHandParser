@@ -97,6 +97,9 @@ module Parser =
                         (pstring "$" >>. pfloat .>> endOfLine)
                         (fun un bet -> Won({Player = un ; Amount = { Amount = decimal bet; Currency = USD} }))
                     )
+    
+    let private unknownLine = notFollowedByL newline "new line uh-oh"  >>. (endOfLine |>> fun x -> Unknown(x))
+
 
     let pActions = (notFollowedByL (pchar '*') "No more actions" 
     >>. 
@@ -111,7 +114,8 @@ module Parser =
         <|> attempt(pSmallBlind)
         <|> attempt(pBigBlind)
         <|> attempt(pShow)
-        <|> attempt(pNoShow)))
+        <|> attempt(pNoShow)
+        <|> attempt(unknownLine)))
     
     let endOfBlock = newline .>> ((notFollowedByL (pchar '*') "* error" |>> ignore) <|> notFollowedByNewline)  
 
