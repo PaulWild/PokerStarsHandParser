@@ -6,30 +6,26 @@ open System
  
     type Suit = Club | Diamond | Heart | Spade
     type Value = Ace | Two | Three | Four | Five | Six | Seven | Eight | Nine | Ten | Jack | Queen | King
-    type Variant = HoldEmNoLimit | HoldEmPotLimit
-
+    
     type Card = {
         Suit: Suit
         Value: Value
     }
 
+    type Variant = HoldEmNoLimit | HoldEmPotLimit
+
     type Player = String
     
-    type Currency = Chips | USD | GBP
+    type Currency = USD | GBP | CHIPS
 
-    type Amount = {
+    type Amount =  {
         Amount: decimal
         Currency: Currency
     }
-
+        
     type Dealt = {
         Player: Player
         Hand: Card List
-    }
-
-    type Seat = {
-        Position: int
-        Player: Player
     }
 
     type Action = {
@@ -61,18 +57,11 @@ open System
         | Flop of StreetType 
         | Turn of StreetType 
         | River of StreetType 
-        | Showdown of Actions List
-        | Summary
+        | Showdown of Actions List      
 
     type Hand = {
         Date: DateTime
         Type: Variant
         HandNumber: Int64
-        Players: Seat List
-        PreAction: Actions List
         Streets: Street List
-    }
-
-    type UnParsedLine = {
-        Content: String
     }
